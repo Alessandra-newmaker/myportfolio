@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Il Mio Portfolio</title>
+    <meta name="author" content="Alessandra Barbara">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        .welcome-container {
+            display: flex;
+            justify-content: center; /* Centra orizzontalmente il testo */
+            align-items: center; /* Centra verticalmente il testo (opzionale, dipende dal layout) */
+            padding: 20px; /* Aggiungi un po' di spazio intorno al contenitore */
+            margin-top: 80px; /* Aggiunto per evitare la sovrapposizione con la navbar fissa */
+            /* background-color: yellow; /* Puoi riattivare per test */
+        }
+
+        .welcome-text {
+            font-size: 1.5em; /* Regola la dimensione del testo */
+            color: #555; /* Scegli il colore del testo */
+            font-style: italic; /* Aggiunto il corsivo */
+            font-family: 'EB Garamond', serif; /* Un font serif classico ed elegante */
+            font-weight: bold; /* Rendi il testo in grassetto (opzionale) */
+            text-align: center; /* Assicura che il testo sia centrato all'interno del paragrafo */
+            /* border: 2px solid blue; /* Puoi riattivare per test */
+        }
+        .carousel-item {
+    position: relative;
+    height: 500px; /* Impostiamo un'altezza fissa per evitare distorsioni */
+    overflow: hidden;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%; /* Riempiamo il contenitore senza deformare l'immagine */
+    width: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10%; /* Posiziona il testo un po' più sopra rispetto al fondo */
+    left: 0;
+    right: 0;
+    padding: 0 10%; /* Aggiungi margini laterali */
+    text-align: left;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5;
+    word-wrap: break-word;
+    max-width: 100%; /* Aggiungiamo un limite alla larghezza */
+}
+.carousel {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+body {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+        .navbar {
+    padding-top: 0.0rem; /* Regola questo valore per ridurre lo spazio sopra gli elementi */
+    padding-bottom: 0.0rem; /* Regola questo valore per ridurre lo spazio sotto gli elementi */
+    background-color: #f8f0e3 !important;
+    color: #7a685a;
+    border-top: 1px solid #e0dad4;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            font-size: 1.2em;
+            font-style: italic;
+            font-family: 'EB Garamond', serif;
+            color: #7a685a;
+            padding-top: 0.0rem; /* Riduci il padding sopra i link */
+            padding-bottom: 0.0rem; /* Riduci il padding sotto i link */
+        }
+        footer {
+    text-align: center;
+    padding: 2vh; /* Utilizzo vh */
+    background-color: #f8f0e3;
+    color: #7a685a;
+    border-top: 1px solid #e0dad4;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+footer p, footer a {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+}
+
+footer a {
+    color: #d87093;
+    text-decoration: none;
+    margin: 0 1vw; /* Utilizzo vw */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <!--INIZIO NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" title="Vai all'home di Alessandra Barbara"><img src="img/logo.webp" alt="Logo Alessandra Barbara"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="esperienzeaziendali.html" title="Leggi le mie esperienze in azienda">Esperienze aziendali</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="esperienzenelfitness.html" title="Leggi le mie esperienze nello sport">Esperienze nel fitness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="passionietempolibero.html" title="Leggi i miei hobbies">Passioni e Tempo libero</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--FINE NAVBAR-->
+    <div class="container-fluid">
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/alessandra-barbara-header.webp" class="d-block w-100" alt="Benvenuti nel mio portfolio digitale">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <footer>
+        <p><a href="mailto:alessandra.barbara89@libero.it">alessandra.barbara89@libero.it</a> | Autore: Alessandra Barbara</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>

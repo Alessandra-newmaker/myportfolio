@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Il Mio Portfolio</title>
+    <meta name="author" content="Alessandra Barbara">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        .welcome-container {
+            display: flex;
+            justify-content: center; /* Centra orizzontalmente il testo */
+            align-items: center; /* Centra verticalmente il testo (opzionale, dipende dal layout) */
+            padding: 20px; /* Aggiungi un po' di spazio intorno al contenitore */
+            margin-top: 80px; /* Aggiunto per evitare la sovrapposizione con la navbar fissa */
+            /* background-color: yellow; /* Puoi riattivare per test */
+        }
+
+        .welcome-text {
+            font-size: 1.5em; /* Regola la dimensione del testo */
+            color: #555; /* Scegli il colore del testo */
+            font-style: italic; /* Aggiunto il corsivo */
+            font-family: 'EB Garamond', serif; /* Un font serif classico ed elegante */
+            font-weight: bold; /* Rendi il testo in grassetto (opzionale) */
+            text-align: center; /* Assicura che il testo sia centrato all'interno del paragrafo */
+            /* border: 2px solid blue; /* Puoi riattivare per test */
+        }
+        .carousel-item {
+    position: relative;
+    height: 500px; /* Impostiamo un'altezza fissa per evitare distorsioni */
+    overflow: hidden;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%; /* Riempiamo il contenitore senza deformare l'immagine */
+    width: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10%; /* Posiziona il testo un po' più sopra rispetto al fondo */
+    left: 0;
+    right: 0;
+    padding: 0 10%; /* Aggiungi margini laterali */
+    text-align: left;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5;
+    word-wrap: break-word;
+    max-width: 100%; /* Aggiungiamo un limite alla larghezza */
+}
+
+.carousel-caption-title {
+    font-size: 1.3em;
+    color: #a12951;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    text-align: center;
+    padding: 10px 0;
+    white-space: normal; /* Permette di andare a capo automaticamente */
+    overflow: hidden; /* Evita che il testo ecceda */
+    word-wrap: break-word; /* Permette la divisione delle parole */
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption-title {
+        font-size: 1em; /* Adattiamo la dimensione del font su dispositivi più piccoli */
+    }
+
+    .carousel-caption {
+        bottom: 10%;
+        padding: 0 8%; /* Ridurre il padding laterale sui dispositivi più piccoli */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-caption-title {
+        font-size: 0.9em; /* Font ancora più piccolo su dispositivi molto piccoli */
+    }
+
+    .carousel-caption {
+        padding: 0 5%;
+    }
+}
+
+
+
+.text-section {
+    margin-top: 0px; /* Aggiunge spazio sopra la sezione per separarla dal carosello */
+    padding: 20px; /* Aggiunge un po' di spazio interno intorno al testo */
+    text-align: left; /* Allinea il testo a sinistra (puoi cambiare in center o justify) *
+    color: #333; /* Colore del testo (grigio scuro) */
+    font-size: 1em; /* Dimensione del font */
+    line-height: 1.6; /* Spazio tra le righe per una migliore leggibilità */
+    font-style: italic;
+    font-family: 'EB Garamond', serif;
+    background-image: url('img/sfondo.webp'); /* MODIFICA QUESTO PERCORSO CON IL TUO */
+    background-size: cover; /* Copre l'intera area del div */
+    background-repeat: no-repeat; /* Non ripete l'immagine */
+    padding: 40px; /* Aumenta il padding per la leggibilità */
+    /* Puoi aggiungere un bordo o uno sfondo se lo desideri */
+    /* border: 1px solid #ccc; */
+    /* background-color: #f9f9f9; */
+}
+
+.text-section h2 {
+    color: #ac365d;
+    font-size: 1.6em; /* Dimensione del titolo */
+    margin-bottom: 0px;/* Spazio sotto il titolo */
+    border-bottom: 2px solid #eee; /* Linea sottile sotto il titolo */
+    padding-bottom: 5px;
+    font-style: italic;
+    font-family: 'EB Garamond', serif;
+}
+.text-section p {
+    color: #333; /* Colore del testo (grigio scuro) */
+    font-size: 1.2em; /* Aumentato la dimensione del font (il valore predefinito è 1em) */
+    line-height: 1.6; /* Spazio tra le righe per una migliore leggibilità */
+    font-style: italic;
+    font-family: 'EB Garamond', serif;
+    /* Altre proprietà che potresti avere per il paragrafo */
+}
+        .navbar {
+    padding-top: 0.0rem; /* Regola questo valore per ridurre lo spazio sopra gli elementi */
+    padding-bottom: 0.0rem; /* Regola questo valore per ridurre lo spazio sotto gli elementi */
+    background-color: #f8f0e3 !important;
+    color: #7a685a;
+    border-top: 1px solid #e0dad4;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            font-size: 1.2em;
+            font-style: italic;
+            font-family: 'EB Garamond', serif;
+            color: #7a685a;
+            padding-top: 0.0rem; /* Riduci il padding sopra i link */
+            padding-bottom: 0.0rem; /* Riduci il padding sotto i link */
+        }
+
+
+        footer {
+    text-align: center;
+    padding: 2vh; /* Utilizzo vh */
+    background-color: #f8f0e3;
+    color: #7a685a;
+    border-top: 1px solid #e0dad4;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+footer p, footer a {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+}
+
+footer a {
+    color: #d87093;
+    text-decoration: none;
+    margin: 0 1vw; /* Utilizzo vw */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <!--INIZIO NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" title="Vai all'home di Alessandra Barbara"><img src="img/logo.webp" alt="Logo Alessandra Barbara"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="esperienzeaziendali.html">Esperienze aziendali</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="esperienzenelfitness.html">Esperienze nel fitness</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="passionietempolibero.html">Passioni e Tempo libero</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--FINE NAVBAR-->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-centered">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/esperienzeaziendali.webp" class="d-block w-100" alt="Leggi le mie esperienze in azienda">
+            <div class="carousel-caption">
+                <h3 class="carousel-caption-title">Manager e Assistente di Direzione con esperienza nella gestione di relazioni strategiche con i clienti e nel supporto operativo ai vertici aziendali.<br><br>Competente nell'organizzazione, coordinamento e ottimizzazione di processi interni, con una forte attenzione ai dettagli e alla comunicazione efficace. <br><br>Mi distinguo per la capacità di lavorare in team, time management, problem solving e gestione di progetti complessi, garantendo il raggiungimento degli obbiettivi aziendali.<br><br>Flessibile e orientata ai risultati, con un approccio dinamico e proattivo.<br><br></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--inizio testo-->
+      <div class="text-section">
+        <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+              <img src="img/fioregiallo100.webp" alt="Account Manager">
+            </div>
+            <div class="flex-grow-1 ms-3">
+                <h2>Account Manager</h2>
+            </div>
+          </div>
+        <p>Gestione dei contatti e dei rapporti con i clienti acquisiti a seguito di gare d'appalto; fidelizzazione dei clienti (enti pubblici e privati)
+        sviluppando relazioni continuative, anticipandone i bisogni e gestendone i trigger proponendo prodotti e soluzioni soddisfacenti;
+        rappresentazione dell'azienda presso le sedi dei clienti; condivisione dei feedback dei clienti con gli altri team aziendali coordinando
+        i rapporti e le attività di ufficio; supervisione attività dei vari dipartimenti; travel planning: gestione agenda personale e del CEO;
+        pianificazione, prenotazioni e gestione delle trasferte.</p>
+        <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+              <img src="img/fiorerosso100.webp" alt="Account Manager">
+            </div>
+            <div class="flex-grow-1 ms-3">
+                <h2>Assistente di Direzione</h2>
+            </div>
+          </div>
+        <p>Supporto al CDA; gestione pratiche; archivio e trascrizione verbali; gestione mail e pec; pianificazione eventi e trasferte; acquisti
+            online; richieste preventivi e RDA; utilizzo software gestionale Inaz; supporto HR; utilizzo software gestionale Telemat; reportistica
+            bandi storici; supporto dipartimento comunicazione & marketing; organizzazione fiere; gestione pagine social su Facebook e
+            LinkedIn e rassegna stampa social.</p>
+            <div class="d-flex align-items-center">
+                <div class="flex-shrink-0">
+                  <img src="img/fioreblu100.webp" alt="Account Manager">
+                </div>
+                <div class="flex-grow-1 ms-3">
+                    <h2>Social Media Creator</h2>
+                </div>
+              </div>
+    <p>Supporto operativo e organizzativo per progetti e realtà professionali; Produzione di contenuti digitali per web e social media,
+        grafiche e materiali di comunicazione; gestione documentale, archiviazione digitale e attività di data entry; utilizzo di
+        strumenti cloud e digitali (Microsoft 365, Google Workspace, AI tools).</p>
+        <div class="d-flex align-items-center">
+            <div class="flex-shrink-0">
+              <img src="img/fiorearancio100.webp" alt="Account Manager">
+            </div>
+            <div class="flex-grow-1 ms-3">
+                <h2>Formatrice</h2>
+            </div>
+          </div>
+<p>Responsabile della gestione vendite e del portafoglio clienti aziendale; formazioni sull'utilizzo di software gestionali; trasferte in sedi clienti.</p>
+<div class="d-flex align-items-center">
+    <div class="flex-shrink-0">
+      <img src="img/fiorelilla100.webp" alt="Account Manager">
+    </div>
+    <div class="flex-grow-1 ms-3">
+        <h2>Data Entry Specialist</h2>
+    </div>
+  </div>
+<p>Utilizzo del software gestionale aziendale (CRM) e Salesforce per l'inserimento delle pratiche commerciali; formazione sulle linee
+    guida alla compilazione delle pratiche commerciali; supporto al CEO; organizzazione e gestione agenda per colloqui; creazioni di
+    report di fogli elettronici Excel e presentazioni in PowerPoint; ricerca ed archiviazione dei documenti; gestione della corrispondenza
+    via web; gestione contatti partners e partecipazione meeting in video-conference.</p>
+    <div class="d-flex align-items-center">
+        <div class="flex-shrink-0">
+          <img src="img/fioreverde100.webp" alt="Account Manager">
+        </div>
+        <div class="flex-grow-1 ms-3">
+            <h2>Front&Back Office</h2>
+        </div>
+      </div>
+<p>Supporto nell'organizzazione e gestione dell'agenda di BU Manager, HR, CEO; organizzazione meeting in video-conference con
+    sistemi Cisco Webex e Teams; planning eventi; pianificazioni trasferte (voli, hotel, noleggio auto) ed ottimizzazione dei costi (stipula
+    convenzioni con strutture ricettive); organizzazione e gestione della foresteria adibita ai colleghi trasfertisti e consulenti; gestione del centralino, accoglienza e registrazioni; gestione della corrispondenza cartacea e via web; creazioni e gestione di fogli elettronici Excel e archiviazioni documenti.</p>
+</div>
+    </div>
+    <!--fine testo-->
+     <footer>
+        <p><a href="mailto:alessandra.barbara89@libero.it">alessandra.barbara89@libero.it</a> | Autore: Alessandra Barbara</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
